@@ -1,0 +1,670 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>GIC Simple</title>
+</head>
+<body>
+    <div>
+
+       <!-- Nav Bar -->
+        <header class="relative bg-blue-950 shadow-lg border-b border-white/5 z-50">
+            <nav class="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8" aria-label="Global">
+                <div class="flex lg:flex-1">
+                    <a href="GICSimpleHome.html" class="-m-1.5 p-1.5">
+                        <span class="sr-only">GIC Simple</span>
+                        <h5 class="text-4xl text-white font-black tracking-tight">GIC Simple </h5>
+                    </a>
+                </div>
+                <div class="flex lg:hidden">
+                    <button type="button" id="menu-open" class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-400">
+                        <span class="sr-only">Open main menu</span>
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                        </svg>
+                    </button>
+                </div>
+                <div class="hidden lg:flex lg:gap-x-12">
+                    <a href="Features.html" class="text-sm font-semibold leading-6 text-white hover:text-blue-400">Features</a>
+                    <div class="flyout z-40">
+                        <a href="" class="text-sm flex font-semibold leading-6 text-white hover:text-blue-400">
+                            Specialty Markets
+                            <span class="ml-2">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-3 h-3 mt-1.5">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+                                </svg>
+                            </span>
+                        </a>
+                        <div class="flyout-menu hidden top-full absolute inset-x-0 top-0 left-0 z-50 bg-blue-950 pt-8 shadow-lg ring-1 ring-gray-900/5 -mt-8 border-b border-white/5">
+                            <div class="mx-auto grid max-w-7xl grid-cols-1 gap-2 px-6 py-6 sm:grid-cols-2 sm:gap-x-6 sm:gap-y-0 sm:pb-5 lg:grid-cols-4 lg:gap-4 lg:px-8 xl:gap-8">
+                                <div class="group relative -mx-3 flex gap-6 rounded-lg p-3 text-sm leading-6 bg-white/5 hover:bg-white/20 border border-white/10 sm:flex-col sm:p-6">
+                                    <div class="flex h-11 w-11 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-blue-950">
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="h-8 w-8 text-gray-600 group-hover:text-white">
+                                            <path stroke-linecap="round" stroke-linejoin="round" d="M20.25 14.15v4.25c0 1.094-.787 2.036-1.872 2.18-2.087.277-4.216.42-6.378.42s-4.291-.143-6.378-.42c-1.085-.144-1.872-1.086-1.872-2.18v-4.25m16.5 0a2.18 2.18 0 0 0 .75-1.661V8.706c0-1.081-.768-2.015-1.837-2.175a48.114 48.114 0 0 0-3.413-.387m4.5 8.006c-.194.165-.42.295-.673.38A23.978 23.978 0 0 1 12 15.75c-2.648 0-5.195-.429-7.577-1.22a2.016 2.016 0 0 1-.673-.38m0 0A2.18 2.18 0 0 1 3 12.489V8.706c0-1.081.768-2.015 1.837-2.175a48.111 48.111 0 0 1 3.413-.387m7.5 0V5.25A2.25 2.25 0 0 0 13.5 3h-3a2.25 2.25 0 0 0-2.25 2.25v.894m7.5 0a48.667 48.667 0 0 0-7.5 0M12 12.75h.008v.008H12v-.008Z" />
+                                        </svg>
+                                    </div>
+                                    <div>
+                                        <a href="Corporations.html" class="font-semibold text-white">
+                                            Corporations
+                                            <span class="absolute inset-0"></span>
+                                        </a>
+                                        <p class="mt-1 text-gray-300 ">Invest in your business's future with ease and confidence. We ensure complete capital security, steady returns, and unparalleled flexibility to support your company’s financial growth.</p>
+                                    </div>
+                                </div>
+                                <div class="group relative -mx-3 flex gap-6 rounded-lg p-3 text-sm leading-6 bg-white/5 hover:bg-white/20 border border-white/10 sm:flex-col sm:p-6">
+                                    <div class="flex h-11 w-11 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-blue-950">
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="h-8 w-8 text-gray-600 group-hover:text-white">
+                                            <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 21h19.5m-18-18v18m10.5-18v18m6-13.5V21M6.75 6.75h.75m-.75 3h.75m-.75 3h.75m3-6h.75m-.75 3h.75m-.75 3h.75M6.75 21v-3.375c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21M3 3h12m-.75 4.5H21m-3.75 3.75h.008v.008h-.008v-.008Zm0 3h.008v.008h-.008v-.008Zm0 3h.008v.008h-.008v-.008Z" />
+                                        </svg>
+                                    </div>
+                                    <div>
+                                        <a href="Condominiums.html" class="font-semibold text-white">
+                                            Condominiums
+                                            <span class="absolute inset-0"></span>
+                                        </a>
+                                        <p class="mt-1 text-gray-300 ">
+                                            As specialists in building higher-yielding condo reserve funds, we offer experienced portfolio management specifically designed for condominiums. Secure and grow your reserve funds effectively with GIC Simple.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="group relative -mx-3 flex gap-6 rounded-lg p-3 text-sm leading-6 bg-white/5 hover:bg-white/20 border border-white/10 sm:flex-col sm:p-6">
+                                    <div class="flex h-11 w-11 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-blue-950">
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="h-8 w-8 text-gray-600 group-hover:text-white">
+                                            <path stroke-linecap="round" stroke-linejoin="round" d="M15 19.128a9.38 9.38 0 0 0 2.625.372 9.337 9.337 0 0 0 4.121-.952 4.125 4.125 0 0 0-7.533-2.493M15 19.128v-.003c0-1.113-.285-2.16-.786-3.07M15 19.128v.106A12.318 12.318 0 0 1 8.624 21c-2.331 0-4.512-.645-6.374-1.766l-.001-.109a6.375 6.375 0 0 1 11.964-3.07M12 6.375a3.375 3.375 0 1 1-6.75 0 3.375 3.375 0 0 1 6.75 0Zm8.25 2.25a2.625 2.625 0 1 1-5.25 0 2.625 2.625 0 0 1 5.25 0Z" />
+                                        </svg>
+                                    </div>
+                                    <div>
+                                        <a href="PrivateWealth.html" class="font-semibold text-white">
+                                            Private Wealth
+                                            <span class="absolute inset-0"></span>
+                                        </a>
+                                        <p class="mt-1 text-gray-300 ">
+                                            Maximize Returns and achieve higher earnings on your investments.
+                                            Investors can secure higher yields on their cash insured deposits with our cutting-edge digital platform, offering access to premium GIC rates.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="group relative -mx-3 flex gap-6 rounded-lg p-3 text-sm leading-6 bg-white/5 hover:bg-white/20 border border-white/10 sm:flex-col sm:p-6">
+                                    <div class="flex h-11 w-11 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-blue-950">
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="h-8 w-8 text-gray-600 group-hover:text-white">
+                                            <path stroke-linecap="round" stroke-linejoin="round" d="M21 11.25v8.25a1.5 1.5 0 0 1-1.5 1.5H5.25a1.5 1.5 0 0 1-1.5-1.5v-8.25M12 4.875A2.625 2.625 0 1 0 9.375 7.5H12m0-2.625V7.5m0-2.625A2.625 2.625 0 1 1 14.625 7.5H12m0 0V21m-8.625-9.75h18c.621 0 1.125-.504 1.125-1.125v-1.5c0-.621-.504-1.125-1.125-1.125h-18c-.621 0-1.125.504-1.125 1.125v1.5c0 .621.504 1.125 1.125 1.125Z" />
+                                        </svg>
+                                    </div>
+                                    <div>
+                                        <a href="Charities.html" class="font-semibold text-white">
+                                            Charities
+                                            <span class="absolute inset-0"></span>
+                                        </a>
+                                        <p class="mt-1 text-gray-300 ">Our tailored GIC solutions ensure secure, steady growth for your funds, allowing you to focus more on your mission and helping you build a more resilient future for your charity.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="FAQ.html" class="text-sm font-semibold leading-6 text-white hover:text-blue-400">FAQ</a>
+                    <a href="http://cashiq.ca/home/press" class="text-sm font-semibold leading-6 text-white hover:text-blue-400">Blog</a>
+                    <div class="dropdown">
+                        <a href="#" class="text-sm font-semibold leading-6 text-white hover:text-blue-400 flex">
+                            About Us
+                            <span class="ml-2">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-3 h-3 mt-1.5">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+                                </svg>
+                            </span>
+                        </a>
+                        <ul class="dropdown-menu absolute hidden pt-1 text-sm">
+                            <li class=""><a class="rounded-t bg-gray-200 hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap" href="WhoWeAre.html">Who We Are</a></li>
+                            <li class=""><a class="rounded-b bg-gray-200 hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap" href="ContactUs.html">Contact Us</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="hidden lg:flex lg:flex-1 lg:justify-end">
+                    <a href="https://gicsimple.cashiq.ca/Account/Login" class="rounded-md bg-white/10 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-white/20 mr-3">Log in <span aria-hidden="true">&rarr;</span></a>
+                </div>
+            </nav>
+
+
+            <!-- Mobile menu, show/hide based on menu open state. -->
+
+            <div class="hidden" role="dialog" id="mobile-menu" aria-modal="true">
+                <!-- Background backdrop, show/hide based on slide-over state. -->
+                <div class="fixed inset-0 z-10"></div>
+                <div class="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-blue-950 px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
+                    <div class="flex items-center justify-between">
+                        <a href="GICSimpleHome.html" class="-m-1.5 p-1.5">
+                            <span class="sr-only">Your Company</span>
+                            <h5 class="text-4xl text-white font-black tracking-tight">GIC Simple </h5>
+                        </a>
+                        <button type="button" id="menu-close" class="-m-2.5 rounded-md p-2.5 text-gray-400">
+                            <span class="sr-only">Close menu</span>
+                            <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="mt-6 flow-root">
+                        <div class="-my-6 divide-y divide-gray-500/10">
+                            <div class="py-6">
+                                <a href="#" class="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-white bg-white/10 hover:bg-gray-50 hover:text-blue-400">Log in</a>
+                            </div>
+                            <div class="space-y-2 py-6">
+                                <a href="Features.html" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-white hover:bg-gray-50 hover:text-blue-400">Features</a>
+                                <a href="FAQ.html" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-white hover:bg-gray-50 hover:text-blue-400">FAQ</a>
+                                <a href="http://cashiq.ca/home/press" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-white hover:bg-gray-50 hover:text-blue-400">Blog</a>
+                            </div>
+                            <div class="space-y-2 py-6">
+                                <a href="Corporations.html" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-white hover:bg-gray-50 hover:text-blue-400">Corporations</a>
+                                <a href="Condominiums.html" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-white hover:bg-gray-50 hover:text-blue-400">Condominiums</a>
+                                <a href="PrivateWealth.html" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-white hover:bg-gray-50 hover:text-blue-400">Private Wealth</a>
+                                <a href="Charities.html" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-white hover:bg-gray-50 hover:text-blue-400">Charities</a>
+                            </div>
+                            <div class="space-y-2 py-6">
+                                <a href="WhoWeAre.html" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-white hover:bg-gray-50 hover:text-blue-400">Who We Are</a>
+                                <a href="Contact.html" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-white hover:bg-gray-50 hover:text-blue-400">Contact Us</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </header>
+
+        <!-- Hero Section -->
+        <div class="relative isolate overflow-hidden bg-blue-950 z-40">
+            <svg class="absolute inset-0 -z-10 h-full w-full stroke-white/10 [mask-image:radial-gradient(100%_100%_at_top_right,white,transparent)]" aria-hidden="true">
+                <defs>
+                    <pattern id="983e3e4c-de6d-4c3f-8d64-b9761d1534cc" width="200" height="200" x="50%" y="-1" patternUnits="userSpaceOnUse">
+                        <path d="M.5 200V.5H200" fill="none" />
+                    </pattern>
+                </defs>
+                <svg x="50%" y="-1" class="overflow-visible fill-gray-800/20">
+                    <path d="M-200 0h201v201h-201Z M600 0h201v201h-201Z M-400 600h201v201h-201Z M200 800h201v201h-201Z" stroke-width="0" />
+                </svg>
+                <rect width="100%" height="100%" stroke-width="0" fill="url(#983e3e4c-de6d-4c3f-8d64-b9761d1534cc)" />
+            </svg>
+            <div class="absolute left-[calc(50%-4rem)] top-10 -z-10 transform-gpu blur-3xl sm:left-[calc(50%-18rem)] lg:left-48 lg:top-[calc(50%-30rem)] xl:left-[calc(50%-24rem)]" aria-hidden="true">
+                <div class="aspect-[1108/632] w-[69.25rem] bg-gradient-to-r from-[#1ab394] to-[#10b981] opacity-20" style="clip-path: polygon(73.6% 51.7%, 91.7% 11.8%, 100% 46.4%, 97.4% 82.2%, 92.5% 84.9%, 75.7% 64%, 55.3% 47.5%, 46.5% 49.4%, 45% 62.9%, 50.3% 87.2%, 21.3% 64.1%, 0.1% 100%, 5.4% 51.1%, 21.4% 63.9%, 58.9% 0.2%, 73.6% 51.7%)"></div>
+            </div>
+            <div class="mx-auto max-w-7xl px-6 pb-10 pt-10 lg:flex lg:px-8 lg:pt-24">
+                <div class="mx-auto max-w-2xl flex-shrink-0 lg:mx-0 lg:max-w-xl lg:pt-8">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-11 h-11 text-blue-400">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 18.75a60.07 60.07 0 0 1 15.797 2.101c.727.198 1.453-.342 1.453-1.096V18.75M3.75 4.5v.75A.75.75 0 0 1 3 6h-.75m0 0v-.375c0-.621.504-1.125 1.125-1.125H20.25M2.25 6v9m18-10.5v.75c0 .414.336.75.75.75h.75m-1.5-1.5h.375c.621 0 1.125.504 1.125 1.125v9.75c0 .621-.504 1.125-1.125 1.125h-.375m1.5-1.5H21a.75.75 0 0 0-.75.75v.75m0 0H3.75m0 0h-.375a1.125 1.125 0 0 1-1.125-1.125V15m1.5 1.5v-.75A.75.75 0 0 0 3 15h-.75M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Zm3 0h.008v.008H18V10.5Zm-12 0h.008v.008H6V10.5Z" />
+                    </svg>
+                    <div class="hidden sm:mt-32 sm:flex lg:mt-16">
+                        <div class="relative rounded-full px-3 py-1 text-sm leading-6 text-gray-200 ring-1 ring-white/5 hover:ring-gray-950/20">
+                            Earn a higher return than HISAs. <a href="#" class="whitespace-nowrap font-semibold text-blue-400"><span class="absolute inset-0" aria-hidden="true"></span>Read more <span aria-hidden="true">&rarr;</span></a>
+                        </div>
+                    </div>
+                    <h1 class="mt-24 text-4xl font-bold tracking-tight text-white sm:mt-10 sm:text-6xl">A simpler way to invest in GICs online.</h1>
+                    <p class="mt-6 text-lg leading-8 text-gray-200">Earn more and access your money earlier with our short term and redeemable GICs. Keep your savings 100% secure with insured GICs. Access your money with ease.</p>
+                    <div class="mt-10 flex items-center gap-x-6">
+                        <a href="#contact" class="rounded-md bg-blue-700 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-blue-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600">Get started</a>
+                        <a href="#contact" class="text-sm font-semibold leading-6 text-gray-200 hover:text-blue-400">Learn more <span aria-hidden="true">→</span></a>
+                    </div>
+                </div>
+                <div class="mx-auto mt-16 flex max-w-2xl sm:mt-24 lg:ml-10 lg:mr-0 lg:mt-0 lg:max-w-none lg:flex-none xl:ml-32">
+                    <div class="max-w-3xl flex-none sm:max-w-5xl lg:max-w-none">
+                        <img src="https://tailwindui.com/img/component-images/dark-project-app-screenshot.png" alt="App screenshot" width="2432" height="1442" class="w-[76rem] rounded-md ring-1 ring-white/10 hidden">
+                        <img src="GICSimple/gicsimpleHero.png" alt="App screenshot" class="w-[76rem] rounded-md">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Today's top rates py-36 -->
+        <div class="bg-white py-24 ">
+            <div class="mx-auto max-w-7xl px-6 lg:px-8">
+                <div class="mx-auto max-w-2xl lg:max-w-none">
+                    <div class="text-center">
+                        <h2 class="text-3xl font-bold tracking-tight text-gray-950 sm:text-4xl">Today’s best Guaranteed Investment Certificate rates</h2>
+                        <p class="mt-4 text-lg leading-8 text-gray-600">The best GIC rates in Canada at your fingertips. No paperwork or cheques required.</p>
+                    </div>
+                    <dl class="mt-16 grid grid-cols-1 gap-0.5 overflow-hidden rounded-2xl text-center sm:grid-cols-2 lg:grid-cols-5 shadow-sm">
+                        <div class="flex flex-col bg-slate-100 p-8">
+                            <dt class="text-sm font-semibold leading-6 text-gray-600">1 Year</dt>
+                            <dd class="order-first text-3xl font-semibold tracking-tight text-gray-950">@Model.topRates["1year"]</dd>
+                        </div>
+                        <div class="flex flex-col bg-slate-100 p-8">
+                            <dt class="text-sm font-semibold leading-6 text-gray-600">2 Year</dt>
+                            <dd class="order-first text-3xl font-semibold tracking-tight text-gray-950">@Model.topRates["2year"]</dd>
+                        </div>
+                        <div class="flex flex-col bg-slate-100 p-8">
+                            <dt class="text-sm font-semibold leading-6 text-gray-600">3 Year</dt>
+                            <dd class="order-first text-3xl font-semibold tracking-tight text-gray-950">@Model.topRates["3year"]</dd>
+                        </div>
+                        <div class="flex flex-col bg-slate-100 p-8">
+                            <dt class="text-sm font-semibold leading-6 text-gray-600">4 Year</dt>
+                            <dd class="order-first text-3xl font-semibold tracking-tight text-gray-950">@Model.topRates["4year"]</dd>
+                        </div>
+                        <div class="flex flex-col bg-slate-100 p-8">
+                            <dt class="text-sm font-semibold leading-6 text-gray-600">5 Year</dt>
+                            <dd class="order-first text-3xl font-semibold tracking-tight text-gray-950">@Model.topRates["5year"]</dd>
+                        </div>
+                    </dl>
+                </div>
+            </div>
+        </div>
+
+        <!-- 4 features section -->
+        <div class="bg-blue-950 py-24">
+            <div class="mx-auto max-w-7xl px-6 lg:px-8">
+                <div class="mx-auto max-w-2xl lg:text-center">
+                    <h2 class="text-base font-semibold leading-7 text-blue-400">Get more for your savings</h2>
+                    <p class="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">What does GIC simple offer?</p>
+                    <p class="mt-6 text-lg leading-8 text-gray-300">Earn more and access your money faster with our short term and redeemable GICs.</p>
+                </div>
+                <div class="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-4xl">
+                    <dl class="grid max-w-xl grid-cols-1 gap-x-8 gap-y-10 lg:max-w-none lg:grid-cols-2 lg:gap-y-16">
+                        <div class="relative pl-16">
+                            <dt class="text-base font-semibold leading-7 text-white">
+                                <div class="absolute left-0 top-0 flex h-10 w-10 items-center justify-center rounded-lg bg-blue-400">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-white">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                                    </svg>
+                                </div>
+                                Earn more on your cash, all the time.
+                            </dt>
+                            <dd class="mt-2 text-base leading-7 text-gray-300">Maximize your savings with our constantly updated GIC portfolios, tailored for both short-term and long-term goals. We'll remind you to reinvest at maturity, ensuring your money always earns top rates.</dd>
+                        </div>
+                        <div class="relative pl-16">
+                            <dt class="text-base font-semibold leading-7 text-white">
+                                <div class="absolute left-0 top-0 flex h-10 w-10 items-center justify-center rounded-lg bg-blue-400">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-white">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M16.5 10.5V6.75a4.5 4.5 0 1 0-9 0v3.75m-.75 11.25h10.5a2.25 2.25 0 0 0 2.25-2.25v-6.75a2.25 2.25 0 0 0-2.25-2.25H6.75a2.25 2.25 0 0 0-2.25 2.25v6.75a2.25 2.25 0 0 0 2.25 2.25Z" />
+                                    </svg>
+                                </div>
+                                Your deposits are fully insured.
+                            </dt>
+                            <dd class="mt-2 text-base leading-7 text-gray-300">
+                                GICs are among Canada's safest investments, insured federally or provincially based on the institution. GIC Simple ensures your savings are optimally allocated across multiple institutions, keeping within insurance limits, without ever handling your cash directly.
+                            </dd>
+                        </div>
+                        <div class="relative pl-16">
+                            <dt class="text-base font-semibold leading-7 text-white">
+                                <div class="absolute left-0 top-0 flex h-10 w-10 items-center justify-center rounded-lg bg-blue-400">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-white">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M12 21v-8.25M15.75 21v-8.25M8.25 21v-8.25M3 9l9-6 9 6m-1.5 12V10.332A48.36 48.36 0 0 0 12 9.75c-2.551 0-5.056.2-7.5.582V21M3 21h18M12 6.75h.008v.008H12V6.75Z" />
+                                    </svg>
+                                </div>
+                                Access to over 20 Financial Institution GIC issuers.
+                            </dt>
+                            <dd class="mt-2 text-base leading-7 text-gray-300">Build a high-yielding GIC portfolio with GIC Simple, accessing top rates across Canada from home. Invest easily in your preferred institutions and monitor your portfolio in real time, 24/7. We'll also alert you to upcoming maturities.</dd>
+                        </div>
+                        <div class="relative pl-16">
+                            <dt class="text-base font-semibold leading-7 text-white">
+                                <div class="absolute left-0 top-0 flex h-10 w-10 items-center justify-center rounded-lg bg-blue-400">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-white">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 15a4.5 4.5 0 0 0 4.5 4.5H18a3.75 3.75 0 0 0 1.332-7.257 3 3 0 0 0-3.758-3.848 5.25 5.25 0 0 0-10.233 2.33A4.502 4.502 0 0 0 2.25 15Z" />
+                                    </svg>
+                                </div>
+                                Fully digital, simple, secure application.
+                            </dt>
+                            <dd class="mt-2 text-base leading-7 text-gray-300">Invest at your convenience; only you can initiate transactions. Your GIC order is confirmed electronically, eliminating the wait for traditional paper processes. We prioritize your privacy and security, ensuring your data remains protected on our platform. </dd>
+                        </div>
+                    </dl>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="overflow-hidden bg-white py-24 sm:py-32">
+            <div class="mx-auto max-w-7xl md:px-6 lg:px-8">
+                <div class="grid grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:grid-cols-2 lg:items-start">
+                    <div class="px-6 lg:px-0 lg:pr-4 lg:pt-4">
+                        <div class="mx-auto max-w-2xl lg:mx-0 lg:max-w-lg">
+                            <h2 class="text-base font-semibold leading-7 text-blue-950 text-shadow-sm">Get more for your savings, buy GICs</h2>
+                            <p class="mt-2 text-3xl font-bold tracking-tight text-gray-950 sm:text-4xl">
+                                How does GIC Simple deliver
+                                higher yields?
+                            </p>
+                            <p class="mt-6 text-lg leading-8 text-gray-600 hidden">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.</p>
+                            <dl class="mt-10 max-w-xl space-y-8 text-base leading-7 text-gray-600 lg:max-w-none">
+                                <dd class="leading-8">
+                                    Smaller banks, trust companies and credit unions have lower operating costs and they pass on the savings to depositors in the form of higher rates. GIC Simple intelligently optimizes the interest rate paid on your cash each day by searching for the best prevailing rates and gives you the convenience of transacting on a single convenient portal. GIC Simple members typically earn 1.2% to 2.0% more than they currently do at the traditional major Canadian “bricks and mortar” banks.
+                                </dd>
+                            </dl>
+                        </div>
+                        <div class="mt-10 w-full max-w-2xl lg:max-w-lg">
+                            <a href="#registerSection" id="" class="rounded-md bg-blue-950 px-3.5 py-2.5 text-md font-semibold text-white shadow-sm hover:bg-blue-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-400">Join GIC Simple today</a>
+                        </div>
+                    </div>
+                    <div class="sm:px-6 lg:px-0">
+                        <div class="relative isolate overflow-hidden bg-blue-950 px-6 pt-8 sm:mx-auto sm:max-w-2xl sm:rounded-3xl sm:pl-16 sm:pr-0 sm:pt-16 lg:mx-0 lg:max-w-none">
+                            <div class="absolute -inset-y-px -left-3 -z-10 w-full origin-bottom-left skew-x-[-30deg] bg-blue-400 opacity-20 ring-1 ring-inset ring-white" aria-hidden="true"></div>
+                            <div class="mx-auto max-w-2xl sm:mx-0 sm:max-w-none">
+                                <img src="GICSimple/gicsimpleAppScreenshot.png" alt="Product screenshot" width="2432" height="1442" class="-mb-12 w-[57rem] max-w-none rounded-tl-xl bg-gray-800 ring-1 ring-white/10">
+                            </div>
+                            <div class="pointer-events-none absolute inset-0 ring-1 ring-inset ring-black/10 sm:rounded-3xl" aria-hidden="true"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="bg-blue-950">
+            <div class="mx-auto max-w-7xl px-6 py-24 sm:py-32 lg:flex lg:items-center lg:justify-between lg:px-8">
+                <h2 class="text-3xl font-bold tracking-tight text-blue-400 sm:text-4xl">Ready to dive in?<br>Start earning more for your savings today.</h2>
+                <div class="mt-10 flex items-center gap-x-6 lg:mt-0 lg:flex-shrink-0">
+                    <a href="#contact" class="rounded-md bg-blue-700 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-blue-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600">Get started</a>
+                    <a href="#contact" class="text-sm font-semibold leading-6 text-white hover:text-blue-400">Learn more <span aria-hidden="true">→</span></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="bg-white py-24 sm:py-32">
+            <div class="mx-auto max-w-7xl px-6 lg:px-8">
+                <div class="mb-10">
+                    <h2 class="text-base font-semibold leading-7 text-blue-950 text-shadow-sm">Quickly onboard and start earning more for your savings today.</h2>
+                    <p class="mt-2 text-3xl font-bold tracking-tight text-gray-950 sm:text-4xl">
+                        Joining GIC Simple is Easy!
+                    </p>
+                </div>
+                <div class="mx-auto grid max-w-2xl grid-cols-1 gap-8 overflow-hidden lg:mx-0 lg:max-w-none lg:grid-cols-4">
+                    <div>
+                        <time datetime="2021-08" class="flex items-center text-sm font-semibold leading-6 text-blue-600">
+                            <svg viewBox="0 0 4 4" class="mr-4 h-1 w-1 flex-none text-blue-950" aria-hidden="true">
+                                <circle cx="2" cy="2" r="2" fill="currentColor" />
+                            </svg>
+                            <span class="bg-blue-950 text-white p-3 rounded-full font-bold">
+                                Step 1
+                            </span>
+                            <div class="absolute -ml-2 h-px w-screen -tranblue-x-full bg-gray-950/10 sm:-ml-4 lg:static lg:-mr-6 lg:ml-8 lg:w-auto lg:flex-auto lg:tranblue-x-0" aria-hidden="true"></div>
+                        </time>
+                        <p class="mt-6 text-lg font-semibold leading-8 tracking-tight text-gray-950">Setup New Account</p>
+                        <p class="mt-1 text-base leading-7 text-gray-600">Provide client information and identification in accordance with regulatory requirements.</p>
+                    </div>
+                    <div>
+                        <time datetime="2021-12" class="flex items-center text-sm font-semibold leading-6 text-blue-950">
+                            <svg viewBox="0 0 4 4" class="mr-4 h-1 w-1 flex-none" aria-hidden="true">
+                                <circle cx="2" cy="2" r="2" fill="currentColor" />
+                            </svg>
+                            <span class="bg-blue-950 text-white p-3 rounded-full font-bold">
+                                Step 2
+                            </span>
+                            <div class="absolute -ml-2 h-px w-screen -tranblue-x-full bg-gray-950/10 sm:-ml-4 lg:static lg:-mr-6 lg:ml-8 lg:w-auto lg:flex-auto lg:tranblue-x-0" aria-hidden="true"></div>
+                        </time>
+                        <p class="mt-6 text-lg font-semibold leading-8 tracking-tight text-gray-950">Construct GIC Portfolio</p>
+                        <p class="mt-1 text-base leading-7 text-gray-600">Construct GIC portfolio with GIC Simple preferred Canadian Financial Institution issuers with CDIC and provincial deposit insurance programs.</p>
+                    </div>
+                    <div>
+                        <time datetime="2022-02" class="flex items-center text-sm font-semibold leading-6 text-blue-950">
+                            <svg viewBox="0 0 4 4" class="mr-4 h-1 w-1 flex-none" aria-hidden="true">
+                                <circle cx="2" cy="2" r="2" fill="currentColor" />
+                            </svg>
+                            <span class="bg-blue-950 text-white p-3 rounded-full font-bold">
+                                Step 3
+                            </span>
+                            <div class="absolute -ml-2 h-px w-screen -tranblue-x-full bg-gray-950/10 sm:-ml-4 lg:static lg:-mr-6 lg:ml-8 lg:w-auto lg:flex-auto lg:tranblue-x-0" aria-hidden="true"></div>
+                        </time>
+                        <p class="mt-6 text-lg font-semibold leading-8 tracking-tight text-gray-950">Fund Purchases</p>
+                        <p class="mt-1 text-base leading-7 text-gray-600">Fund your purchase of GICs from your existing Canadian financial institution via electronic funds transfer (EFT).</p>
+                    </div>
+                    <div>
+                        <time datetime="2022-12" class="flex items-center text-sm font-semibold leading-6 text-blue-950">
+                            <svg viewBox="0 0 4 4" class="mr-4 h-1 w-1 flex-none" aria-hidden="true">
+                                <circle cx="2" cy="2" r="2" fill="currentColor" />
+                            </svg>
+                            <span class="bg-blue-950 text-white p-3 rounded-full font-bold">
+                                Step 4
+                            </span>
+                            <div class="absolute -ml-2 h-px w-screen -tranblue-x-full bg-gray-950/10 sm:-ml-4 lg:static lg:-mr-6 lg:ml-8 lg:w-auto lg:flex-auto lg:tranblue-x-0" aria-hidden="true"></div>
+                        </time>
+                        <p class="mt-6 text-lg font-semibold leading-8 tracking-tight text-gray-950">View Portfolio</p>
+                        <p class="mt-1 text-base leading-7 text-gray-600">View your GIC investment portfolio online in real time, 24/7 on your secure GIC Simple member portal.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!---->
+        <section class="bg-blue-950 pt-10">
+            <div class="mx-auto max-w-xl text-center">
+                <h2 class="text-lg font-semibold leading-8 tracking-tight text-blue-400">Testimonials</h2>
+                <p class="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl mb-10">What they say about us</p>
+            </div>
+            <div class="mx-auto max-w-7xl md:grid md:grid-cols-2 md:px-6 lg:px-8">
+                <div class="px-6 py-12 md:flex md:flex-col md:border-r md:border-blue-950 md:py-16 md:pl-0 md:pr-10 lg:pr-16">
+                    <blockquote class="mt-6 md:flex md:flex-grow md:flex-col">
+                        <div class="relative text-lg font-medium text-white md:flex-grow">
+                            <svg class="absolute left-0 top-0 h-8 w-8 -translate-x-3 -translate-y-2 transform text-blue-600" fill="currentColor" viewBox="0 0 32 32" aria-hidden="true">
+                                <path d="M9.352 4C4.456 7.456 1 13.12 1 19.36c0 5.088 3.072 8.064 6.624 8.064 3.36 0 5.856-2.688 5.856-5.856 0-3.168-2.208-5.472-5.088-5.472-.576 0-1.344.096-1.536.192.48-3.264 3.552-7.104 6.624-9.024L9.352 4zm16.512 0c-4.8 3.456-8.256 9.12-8.256 15.36 0 5.088 3.072 8.064 6.624 8.064 3.264 0 5.856-2.688 5.856-5.856 0-3.168-2.304-5.472-5.184-5.472-.576 0-1.248.096-1.44.192.48-3.264 3.456-7.104 6.528-9.024L25.864 4z" />
+                            </svg>
+                            <p class="relative">...you really got it...this is disruptive…you have done what we have wanted to do for 17 years...</p>
+                        </div>
+                        <footer class="mt-8">
+                            <div class="flex items-start">
+                                <div class="inline-flex flex-shrink-0 rounded-full border-2 border-white">
+                                    <img class="h-12 w-12 rounded-full hidden" src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="">
+                                </div>
+                                <div class="ml-4">
+                                    <div class="text-base font-medium text-white hidden">Judith Black</div>
+                                    <div class="text-base font-medium text-blue-200">COO of Canadian bank</div>
+                                </div>
+                            </div>
+                        </footer>
+                    </blockquote>
+                </div>
+                <div class="border-t-2 border-blue-950 px-6 py-12 md:border-l md:border-t-0 md:py-16 md:pl-10 md:pr-0 lg:pl-16">
+                    <blockquote class="mt-6 md:flex md:flex-grow md:flex-col">
+                        <div class="relative text-lg font-medium text-white md:flex-grow">
+                            <svg class="absolute left-0 top-0 h-8 w-8 -translate-x-3 -translate-y-2 transform text-blue-600" fill="currentColor" viewBox="0 0 32 32">
+                                <path d="M9.352 4C4.456 7.456 1 13.12 1 19.36c0 5.088 3.072 8.064 6.624 8.064 3.36 0 5.856-2.688 5.856-5.856 0-3.168-2.208-5.472-5.088-5.472-.576 0-1.344.096-1.536.192.48-3.264 3.552-7.104 6.624-9.024L9.352 4zm16.512 0c-4.8 3.456-8.256 9.12-8.256 15.36 0 5.088 3.072 8.064 6.624 8.064 3.264 0 5.856-2.688 5.856-5.856 0-3.168-2.304-5.472-5.184-5.472-.576 0-1.248.096-1.44.192.48-3.264 3.456-7.104 6.528-9.024L25.864 4z" />
+                            </svg>
+                            <p class="relative">...you really have a winner...disruptive...it's a dream...can't wait to use it...</p>
+                        </div>
+                        <footer class="mt-8">
+                            <div class="flex items-start">
+                                <div class="inline-flex flex-shrink-0 rounded-full border-2 border-white">
+                                    <img class="h-12 w-12 rounded-full hidden" src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="">
+                                </div>
+                                <div class="ml-4">
+                                    <div class="text-base font-medium text-white hidden">Joseph Rodriguez</div>
+                                    <div class="text-base font-medium text-blue-200">Former Group Head of major Canadian bank</div>
+                                </div>
+                            </div>
+                        </footer>
+                    </blockquote>
+                </div>
+            </div>
+        </section>
+
+        <!--  contact section  -->
+        <div class="relative isolate bg-white px-6 py-24 sm:py-32 lg:px-8" id="contact">
+            <svg class="absolute inset-0 -z-10 h-full w-full stroke-gray-200 [mask-image:radial-gradient(100%_100%_at_top_right,white,transparent)]" aria-hidden="true">
+                <defs>
+                    <pattern id="83fd4e5a-9d52-42fc-97b6-718e5d7ee527" width="200" height="200" x="50%" y="-64" patternUnits="userSpaceOnUse">
+                        <path d="M100 200V.5M.5 .5H200" fill="none" />
+                    </pattern>
+                </defs>
+                <svg x="50%" y="-64" class="overflow-visible fill-gray-50">
+                    <path d="M-100.5 0h201v201h-201Z M699.5 0h201v201h-201Z M499.5 400h201v201h-201Z M299.5 800h201v201h-201Z" stroke-width="0" />
+                </svg>
+                <rect width="100%" height="100%" stroke-width="0" fill="url(#83fd4e5a-9d52-42fc-97b6-718e5d7ee527)" />
+            </svg>
+            <div class="mx-auto max-w-xl lg:max-w-4xl">
+                <h2 class="text-4xl font-bold tracking-tight text-gray-950">Let’s talk about your portfolio</h2>
+                <p class="mt-2 text-lg leading-8 text-gray-600">We help companies, condominiums, charities, and individuals maximize the growth of their portfolios.</p>
+                <div class="mt-16 flex flex-col gap-16 sm:gap-y-20 lg:flex-row">
+                    <form action="https://formspree.io/f/mgegbney" method="POST" class="lg:flex-auto">
+                        <div class="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
+                            <div class="sm:col-span-2">
+                                <label for="email" class="block text-sm font-semibold leading-6 text-gray-950">Email</label>
+                                <div class="mt-2.5">
+                                    <input type="text" name="email" id="email" autocomplete="email" class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-950 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-blue-600 sm:text-sm sm:leading-6">
+                                </div>
+                            </div>
+                            <div>
+                                <label for="first-name" class="block text-sm font-semibold leading-6 text-gray-950">First name</label>
+                                <div class="mt-2.5">
+                                    <input type="text" name="first-name" id="first-name" autocomplete="given-name" class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-950 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-blue-600 sm:text-sm sm:leading-6">
+                                </div>
+                            </div>
+                            <div>
+                                <label for="last-name" class="block text-sm font-semibold leading-6 text-gray-950">Last name</label>
+                                <div class="mt-2.5">
+                                    <input type="text" name="last-name" id="last-name" autocomplete="family-name" class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-950 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-blue-600 sm:text-sm sm:leading-6">
+                                </div>
+                            </div>
+                            <div class="sm:col-span-2">
+                                <label for="message" class="block text-sm font-semibold leading-6 text-gray-950">Message</label>
+                                <div class="mt-2.5">
+                                    <textarea id="message" name="message" rows="4" class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-950 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-blue-600 sm:text-sm sm:leading-6"></textarea>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mt-10">
+                            <button type="submit" class="block w-full rounded-md bg-blue-950 px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-sm hover:bg-blue-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600">Let’s talk</button>
+                        </div>
+                        <p class="mt-4 text-sm leading-6 text-gray-500">By submitting this form, I agree to the <a href="#" class="font-semibold text-blue-600">privacy&nbsp;policy</a>.</p>
+                    </form>
+                    <div class="lg:mt-6 lg:w-80 lg:flex-none">
+                        <img class="h-12 w-auto hidden" src="https://tailwindui.com/img/logos/workcation-logo-blue-600.svg" alt="">
+                        <figure class="mt-10">
+                            <blockquote class="text-lg font-semibold leading-8 text-gray-950">
+                                <p>“At GIC Simple, we believe in  your financial success by turning potential into performance. Let us help you navigate the complexities of financial growth with expertise and personalized care.”</p>
+                            </blockquote>
+                            <figcaption class="mt-10 flex gap-x-6">
+                                <img src="GICSimple/don.jpg" alt="" class="h-12 w-12 flex-none rounded-full bg-gray-50">
+                                <div>
+                                    <div class="text-base font-semibold text-gray-950">Don Martone</div>
+                                    <div class="text-sm leading-6 text-gray-600">CTO / Founder of GIC Simple</div>
+                                </div>
+                            </figcaption>
+                        </figure>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--  footer  -->
+        <footer class="bg-blue-950" aria-labelledby="footer-heading">
+            <h2 id="footer-heading" class="sr-only">Footer</h2>
+            <div class="mx-auto max-w-7xl px-6 pb-8 pt-20 sm:pt-24 lg:px-8 lg:pt-32">
+                <div class="xl:grid xl:grid-cols-3 xl:gap-8">
+                    <div class="grid grid-cols-2 gap-8 xl:col-span-2">
+                        <div class="md:grid md:grid-cols-2 md:gap-8">
+                            <div>
+                                <h3 class="text-sm font-semibold leading-6 text-white">Solutions</h3>
+                                <ul role="list" class="mt-6 space-y-4">
+                                    <li>
+                                        <a href="/Home/Corporations" class="text-sm leading-6 text-white hover:text-blue-400">Corporations</a>
+                                    </li>
+                                    <li>
+                                        <a href="/Home/Condominiums" class="text-sm leading-6 text-white hover:text-blue-400">Condominiums</a>
+                                    </li>
+                                    <li>
+                                        <a href="/Home/PrivateWealth" class="text-sm leading-6 text-white hover:text-blue-400">Private Wealth</a>
+                                    </li>
+                                    <li>
+                                        <a href="/Home/Charities" class="text-sm leading-6 text-white hover:text-blue-400">Charities</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="mt-10 md:mt-0">
+                                <h3 class="text-sm font-semibold leading-6 text-white">Support</h3>
+                                <ul role="list" class="mt-6 space-y-4">
+                                    <li>
+                                        <a href="/Home/Contact" class="text-sm leading-6 text-white hover:text-blue-400">Contact Us</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="md:grid md:grid-cols-2 md:gap-8">
+                            <div>
+                                <h3 class="text-sm font-semibold leading-6 text-white">Company</h3>
+                                <ul role="list" class="mt-6 space-y-4">
+                                    <li>
+                                        <a href="/Home/Features" class="text-sm leading-6 text-white hover:text-blue-400">Features</a>
+                                    </li>
+                                    <li>
+                                        <a href="/Home/FAQ" class="text-sm leading-6 text-white hover:text-blue-400">FAQ</a>
+                                    </li>
+                                    <li>
+                                        <a href="/Home/WhoWeAre" class="text-sm leading-6 text-white hover:text-blue-400">Who We Are</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="mt-10 md:mt-0">
+                                <h3 class="text-sm font-semibold leading-6 text-white">Legal</h3>
+                                <ul role="list" class="mt-6 space-y-4">
+                                    <li>
+                                        <a href="#" class="text-sm leading-6 text-white hover:text-blue-400">Privacy</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="text-sm leading-6 text-white hover:text-blue-400">Terms</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-10 xl:mt-0">
+                        <h3 class="text-sm font-semibold leading-6 text-white">Subscribe to our newsletter</h3>
+                        <p class="mt-2 text-sm leading-6 text-white">The latest news, articles, and resources, sent to your inbox weekly.</p>
+                        <form class="mt-6 sm:flex sm:max-w-md">
+                            <label for="email-address" class="sr-only">Email address</label>
+                            <input type="email" name="email-address" id="email-address" autocomplete="email" required class="w-full min-w-0 appearance-none rounded-md border-0 bg-white/5 px-3 py-1.5 text-base text-white shadow-sm ring-1 ring-inset ring-white/10 placeholder:text-gray-500 focus:ring-2 focus:ring-inset focus:ring-blue-500 sm:w-64 sm:text-sm sm:leading-6 xl:w-full" placeholder="Enter your email">
+                            <div class="mt-4 sm:ml-4 sm:mt-0 sm:flex-shrink-0">
+                                <button type="submit" class="flex w-full items-center justify-center rounded-md bg-blue-500 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-blue-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-500">Subscribe</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="mt-16 border-t border-white/10 pt-8 sm:mt-20 md:flex md:items-center md:justify-between lg:mt-24">
+                    <div class="flex space-x-6 md:order-2">
+                        <a href="#" class="text-white hover:text-blue-400">
+                            <span class="sr-only">LinkedIn</span>
+                            <svg class="h-10 w-10" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M19.448 2.002H4.564C3.701 2.002 3 2.707 3 3.576v17.849c0 .868.701 1.573 1.564 1.573h14.884c.863 0 1.564-.705 1.564-1.573V3.576c0-.869-.701-1.574-1.564-1.574zM8.707 19.709H5.839V9.31h2.868v10.399zm-1.435-11.793c-.919 0-1.66-.756-1.66-1.687 0-.931.741-1.688 1.66-1.688.917 0 1.657.757 1.657 1.688 0 .931-.74 1.687-1.657 1.687zM20.161 19.709h-2.868v-5.415c0-1.293-.026-2.956-1.801-2.956-1.801 0-2.078 1.408-2.078 2.864v5.507H10.547V9.31h2.757v1.418h.039c.384-.735 1.321-1.51 2.719-1.51 2.908 0 3.448 1.914 3.448 4.406v6.085z" />
+                            </svg>
+                        </a>
+                    </div>
+                    <p class="mt-8 text-xs leading-5 text-white md:order-1 md:mt-0">&copy; 2024 GIC Simple, All rights reserved.</p>
+                </div>
+            </div>
+        </footer>
+
+
+
+    </div>
+</body>
+</html>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const menuOpen = document.getElementById('menu-open'); // Open button
+        const menuClose = document.getElementById('menu-close'); // Close button
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        // Open the menu
+        menuOpen.addEventListener('click', function () {
+            mobileMenu.classList.remove('hidden');
+        });
+
+        // Close the menu
+        menuClose.addEventListener('click', function () {
+            mobileMenu.classList.add('hidden');
+        });
+
+        // Close the menu by clicking outside of it
+        document.addEventListener('click', function (event) {
+            if (!mobileMenu.contains(event.target) && !menuOpen.contains(event.target)) {
+                mobileMenu.classList.add('hidden');
+            }
+        });
+    });
+</script>
+
+<style>
+
+    .dropdown:hover .dropdown-menu {
+        display: block;
+    }
+
+    .flyout:hover .flyout-menu,
+    .flyout-menu:hover {
+        display: block;
+    }
+</style>
