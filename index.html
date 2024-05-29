@@ -225,23 +225,23 @@
                     <dl class="mt-16 grid grid-cols-1 gap-0.5 overflow-hidden rounded-2xl text-center sm:grid-cols-2 lg:grid-cols-5 shadow-sm">
                         <div class="flex flex-col bg-slate-100 p-8">
                             <dt class="text-sm font-semibold leading-6 text-gray-600">1 Year</dt>
-                            <dd class="order-first text-3xl font-semibold tracking-tight text-gray-950">@Model.topRates["1year"]</dd>
+                            <dd class="order-first text-3xl font-semibold tracking-tight text-gray-950" id="rate-1year"></dd>
                         </div>
                         <div class="flex flex-col bg-slate-100 p-8">
                             <dt class="text-sm font-semibold leading-6 text-gray-600">2 Year</dt>
-                            <dd class="order-first text-3xl font-semibold tracking-tight text-gray-950">@Model.topRates["2year"]</dd>
+                            <dd class="order-first text-3xl font-semibold tracking-tight text-gray-950" id="rate-2year"></dd>
                         </div>
                         <div class="flex flex-col bg-slate-100 p-8">
                             <dt class="text-sm font-semibold leading-6 text-gray-600">3 Year</dt>
-                            <dd class="order-first text-3xl font-semibold tracking-tight text-gray-950">@Model.topRates["3year"]</dd>
+                            <dd class="order-first text-3xl font-semibold tracking-tight text-gray-950" id="rate-3year"></dd>
                         </div>
                         <div class="flex flex-col bg-slate-100 p-8">
                             <dt class="text-sm font-semibold leading-6 text-gray-600">4 Year</dt>
-                            <dd class="order-first text-3xl font-semibold tracking-tight text-gray-950">@Model.topRates["4year"]</dd>
+                            <dd class="order-first text-3xl font-semibold tracking-tight text-gray-950" id="rate-4year"></dd>
                         </div>
                         <div class="flex flex-col bg-slate-100 p-8">
                             <dt class="text-sm font-semibold leading-6 text-gray-600">5 Year</dt>
-                            <dd class="order-first text-3xl font-semibold tracking-tight text-gray-950">@Model.topRates["5year"]</dd>
+                            <dd class="order-first text-3xl font-semibold tracking-tight text-gray-950" id="rate-5year"></dd>
                         </div>
                     </dl>
                 </div>
@@ -550,16 +550,16 @@
                                 <h3 class="text-sm font-semibold leading-6 text-white">Solutions</h3>
                                 <ul role="list" class="mt-6 space-y-4">
                                     <li>
-                                        <a href="/Home/Corporations" class="text-sm leading-6 text-white hover:text-blue-400">Corporations</a>
+                                        <a href="Corporations.html" class="text-sm leading-6 text-white hover:text-blue-400">Corporations</a>
                                     </li>
                                     <li>
-                                        <a href="/Home/Condominiums" class="text-sm leading-6 text-white hover:text-blue-400">Condominiums</a>
+                                        <a href="Condominiums.html" class="text-sm leading-6 text-white hover:text-blue-400">Condominiums</a>
                                     </li>
                                     <li>
-                                        <a href="/Home/PrivateWealth" class="text-sm leading-6 text-white hover:text-blue-400">Private Wealth</a>
+                                        <a href="PrivateWealth.html" class="text-sm leading-6 text-white hover:text-blue-400">Private Wealth</a>
                                     </li>
                                     <li>
-                                        <a href="/Home/Charities" class="text-sm leading-6 text-white hover:text-blue-400">Charities</a>
+                                        <a href="Charities.html" class="text-sm leading-6 text-white hover:text-blue-400">Charities</a>
                                     </li>
                                 </ul>
                             </div>
@@ -567,7 +567,7 @@
                                 <h3 class="text-sm font-semibold leading-6 text-white">Support</h3>
                                 <ul role="list" class="mt-6 space-y-4">
                                     <li>
-                                        <a href="/Home/Contact" class="text-sm leading-6 text-white hover:text-blue-400">Contact Us</a>
+                                        <a href="ContactUs.html" class="text-sm leading-6 text-white hover:text-blue-400">Contact Us</a>
                                     </li>
                                 </ul>
                             </div>
@@ -577,13 +577,13 @@
                                 <h3 class="text-sm font-semibold leading-6 text-white">Company</h3>
                                 <ul role="list" class="mt-6 space-y-4">
                                     <li>
-                                        <a href="/Home/Features" class="text-sm leading-6 text-white hover:text-blue-400">Features</a>
+                                        <a href="Features.html" class="text-sm leading-6 text-white hover:text-blue-400">Features</a>
                                     </li>
                                     <li>
-                                        <a href="/Home/FAQ" class="text-sm leading-6 text-white hover:text-blue-400">FAQ</a>
+                                        <a href="FAQ.html" class="text-sm leading-6 text-white hover:text-blue-400">FAQ</a>
                                     </li>
                                     <li>
-                                        <a href="/Home/WhoWeAre" class="text-sm leading-6 text-white hover:text-blue-400">Who We Are</a>
+                                        <a href="WhoWeAre.html" class="text-sm leading-6 text-white hover:text-blue-400">Who We Are</a>
                                     </li>
                                 </ul>
                             </div>
@@ -627,7 +627,6 @@
         </footer>
 
 
-
     </div>
 </body>
 </html>
@@ -655,6 +654,33 @@
             }
         });
     });
+
+    async function postRateApi2023(isDirect, province) {
+        const url = 'https://cashiq.ca/Home/RateApi2023';
+        const data = { isDirect: false, province: null };
+
+        try {
+            const response = await fetch(url, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(data)
+            });
+
+            if (!response.ok) {
+                throw new Error(`HTTP error! status: ${response.status}`);
+            }
+
+            const result = await response.json();
+            console.log(result);
+        } catch (error) {
+            console.error('Error:', error);
+        }
+    }
+
+    postRateApi2023(false, null);
+
 </script>
 
 <style>
