@@ -225,23 +225,23 @@
                     <dl class="mt-16 grid grid-cols-1 gap-0.5 overflow-hidden rounded-2xl text-center sm:grid-cols-2 lg:grid-cols-5 shadow-sm">
                         <div class="flex flex-col bg-slate-100 p-8">
                             <dt class="text-sm font-semibold leading-6 text-gray-600">1 Year</dt>
-                            <dd class="order-first text-3xl font-semibold tracking-tight text-gray-950" id="rate-1year"></dd>
+                            <dd class="order-first text-3xl font-semibold tracking-tight text-gray-950" id="1year"></dd>
                         </div>
                         <div class="flex flex-col bg-slate-100 p-8">
                             <dt class="text-sm font-semibold leading-6 text-gray-600">2 Year</dt>
-                            <dd class="order-first text-3xl font-semibold tracking-tight text-gray-950" id="rate-2year"></dd>
+                            <dd class="order-first text-3xl font-semibold tracking-tight text-gray-950" id="2years"></dd>
                         </div>
                         <div class="flex flex-col bg-slate-100 p-8">
                             <dt class="text-sm font-semibold leading-6 text-gray-600">3 Year</dt>
-                            <dd class="order-first text-3xl font-semibold tracking-tight text-gray-950" id="rate-3year"></dd>
+                            <dd class="order-first text-3xl font-semibold tracking-tight text-gray-950" id="3years"></dd>
                         </div>
                         <div class="flex flex-col bg-slate-100 p-8">
                             <dt class="text-sm font-semibold leading-6 text-gray-600">4 Year</dt>
-                            <dd class="order-first text-3xl font-semibold tracking-tight text-gray-950" id="rate-4year"></dd>
+                            <dd class="order-first text-3xl font-semibold tracking-tight text-gray-950" id="4years"></dd>
                         </div>
                         <div class="flex flex-col bg-slate-100 p-8">
                             <dt class="text-sm font-semibold leading-6 text-gray-600">5 Year</dt>
-                            <dd class="order-first text-3xl font-semibold tracking-tight text-gray-950" id="rate-5year"></dd>
+                            <dd class="order-first text-3xl font-semibold tracking-tight text-gray-950" id="5years"></dd>
                         </div>
                     </dl>
                 </div>
@@ -631,6 +631,7 @@
 </body>
 </html>
 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script>
     document.addEventListener('DOMContentLoaded', function () {
         const menuOpen = document.getElementById('menu-open'); // Open button
@@ -655,33 +656,26 @@
         });
     });
 
-    async function postRateApi2023(isDirect, province) {
-        const url = 'https://cashiq.ca/Home/RateApi2023';
-        const data = { isDirect: false, province: null };
-
-        try {
-            const response = await fetch(url, {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify(data)
-            });
-
-            if (!response.ok) {
-                throw new Error(`HTTP error! status: ${response.status}`);
-            }
-
-            const result = await response.json();
-            console.log(result);
-        } catch (error) {
-            console.error('Error:', error);
-        }
+    
+$(function () {
+    $.ajax({
+       type: "POST",
+       url: "https://cashiq.ca/Home/RateApi2023/true",
+       dataType: "json",
+       success: function (result) {
+       if (result.Success) {
+       $("#1year").html(result.rates["1year"]);
+       $("#2years").html(result.rates["2year"]);
+       $("#3years").html(result.rates["3year"]);
+       $("#4years").html(result.rates["4year"]);
+       $("#5years").html(result.rates["5year"]);
+       }
     }
-
-    postRateApi2023(false, null);
+    });
+});
 
 </script>
+
 
 <style>
 
